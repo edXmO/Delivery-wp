@@ -6,7 +6,7 @@
     grid-template-rows:
         [header-start] 10rem [header-end] 7rem [hero-start] repeat(2, minmax(6rem, 1fr))
         [hero-end] 3rem [testimonial-start] 0.5fr repeat(1, minmax(10rem, 1fr))
-        0.5fr [testimonial-end about-start] repeat(1, 1fr) [about-end];
+        0.5fr [testimonial-end] 3rem [about-start] repeat(1, 1fr) [about-end];
     grid-gap: 1rem;
     @media only screen and (max-width: $bg-large) {
         display: grid;
@@ -16,7 +16,7 @@
                 1,
                 minmax(10rem, 1fr)
             )
-            0.5fr [testimonial-end];
+            0.5fr [testimonial-end] 3rem [about-start] repeat(1, 1fr) [about-end];
     }
 }
 
@@ -75,7 +75,7 @@
 
 .section-about {
     background-image: url("https://i.imgur.com/dHr5YEu.png");
-    clip-path: polygon(0 13%, 100% 0, 100% 87%, 0 100%);
+    clip-path: polygon(0 13%, 100% 0%, 100% 100%, 0 87%);
     grid-row: 8 / 9;
     grid-column: 3 / 11;
     display: flex;

@@ -27,13 +27,13 @@ body {
   max-width: 160rem;
   display: grid;
   grid-template-columns: 1fr repeat(10, 1fr) 1fr;
-  grid-template-rows: [header-start] 10rem [header-end] 7rem [hero-start] repeat(2, minmax(6rem, 1fr)) [hero-end] 3rem [testimonial-start] 0.5fr repeat(1, minmax(10rem, 1fr)) 0.5fr [testimonial-end about-start] repeat(1, 1fr) [about-end];
+  grid-template-rows: [header-start] 10rem [header-end] 7rem [hero-start] repeat(2, minmax(6rem, 1fr)) [hero-end] 3rem [testimonial-start] 0.5fr repeat(1, minmax(10rem, 1fr)) 0.5fr [testimonial-end] 3rem [about-start] repeat(1, 1fr) [about-end];
   grid-gap: 1rem; }
   @media only screen and (max-width: 56.25em) {
     .wrapper {
       display: grid;
       grid-template-columns: 1fr repeat(10, 1fr) 1fr;
-      grid-template-rows: [header-start] 10rem [header-end] 7rem [hero-start] 35rem [hero-end] [testimonial-start] 0.5fr repeat(1, minmax(10rem, 1fr)) 0.5fr [testimonial-end]; } }
+      grid-template-rows: [header-start] 10rem [header-end] 7rem [hero-start] 35rem [hero-end] [testimonial-start] 0.5fr repeat(1, minmax(10rem, 1fr)) 0.5fr [testimonial-end] 3rem [about-start] repeat(1, 1fr) [about-end]; } }
 
 .header {
   grid-column: 3 / 11;
@@ -83,7 +83,7 @@ body {
 
 .section-about {
   background-image: url("https://i.imgur.com/dHr5YEu.png");
-  clip-path: polygon(0 13%, 100% 0, 100% 87%, 0 100%);
+  clip-path: polygon(0 13%, 100% 0%, 100% 100%, 0 87%);
   grid-row: 8 / 9;
   grid-column: 3 / 11;
   display: flex;
@@ -273,32 +273,34 @@ body {
     grid-column: 1 / -1;
     display: flex;
     justify-content: center; }
+  .testimonial-cards__info {
+    grid-column: 1 / -1;
+    grid-row: 2 / 5;
+    background-color: var(--color-primary);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    -webkit-clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+    display: grid; }
   .testimonial-cards__name {
     font-family: "Poppins", sans-serif;
     font-size: 1.8rem;
     color: var(--color-white);
     grid-column: 1 / -1;
-    grid-row: 2 / span 1;
+    grid-row: 4 / 5;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    background-color: var(--color-primary);
-    -webkit-clip-path: polygon(0 0, 100% 36%, 100% 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 36%, 100% 100%, 0 100%);
-    background-clip: border-box; }
+    justify-self: center; }
   .testimonial-cards__text {
     font-family: "Poppins", sans-serif;
     grid-column: 1 / -1;
-    grid-row: 3 / 5;
+    grid-row: 2 / 4;
     font-size: 1.6rem;
+    align-self: center;
     text-align: center;
     color: var(--color-white);
-    background-color: var(--color-primary);
-    border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
     position: relative; }
     .testimonial-cards__text p {
-      align-self: center;
+      align-self: flex-end;
       position: relative;
       z-index: 9;
       font-family: "Poppins", sans-serif;

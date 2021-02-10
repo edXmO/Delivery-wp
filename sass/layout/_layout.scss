@@ -24,6 +24,9 @@
 .header {
     grid-column: 3 / 11;
     grid-row: header-start / header-end;
+    @media only screen and (max-width: $bg-mobile-large) {
+        grid-column: 1 / -1;
+    }
 }
 
 .section-hero {
@@ -59,6 +62,9 @@
         grid-column: 3 / 11;
         grid-row: 4 / 5;
     }
+    @media only screen and (max-width: $bg-mobile-large) {
+        grid-column: 1 / -1;
+    }
 }
 
 .section-testimonials {
@@ -84,5 +90,8 @@
     }
     @media only screen and (min-width: $bg-large) {
         grid-row: 9 / 11;
+    }
+    @media only screen and (max-width: $bg-mobile-large) {
+        grid-column: 1 / -1;
     }
 }

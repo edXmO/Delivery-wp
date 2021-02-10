@@ -195,7 +195,7 @@ body {
     align-items: center;
     transition: all 0.45s; }
     .header-navbar__item:not(:last-child) {
-      margin-right: 1rem; }
+      margin-right: 1.5rem; }
     .header-navbar__item:hover {
       background-color: #ededed; }
     @media only screen and (max-width: 56.25em) {
@@ -203,7 +203,7 @@ body {
         padding: 0.5rem 1rem; } }
     @media only screen and (max-width: 37.5em) {
       .header-navbar__item:not(:last-child) {
-        margin-right: 0rem; } }
+        margin-right: 1.5rem; } }
 
 .illustration-box {
   display: flex;

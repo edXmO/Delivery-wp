@@ -16,10 +16,8 @@
         font-weight: bold;
         margin-top: -1.5rem;
         @media only screen and (max-width: $bg-largest) {
+            text-align: center;
             font-size: 4rem;
-        }
-        @media only screen and (max-width: $bg-large) {
-            font-size: 4.5rem;
         }
     }
     &__sub-heading {
@@ -27,9 +25,6 @@
         font-size: 2rem;
         color: var(--color-grey-dark);
         @media only screen and (max-width: $bg-large) {
-            text-align: left;
-        }
-        @media only screen and (max-width: $bg-medium) {
             text-align: center;
         }
     }

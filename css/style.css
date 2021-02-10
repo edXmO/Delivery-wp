@@ -41,22 +41,22 @@ body {
 
 .section-hero {
   grid-column: 3 / span 4;
-  grid-row: 3 / 5;
-  display: flex;
-  align-items: center; }
+  grid-row: hero-start/ hero-end;
+  align-self: center; }
   @media only screen and (max-width: 56.25em) {
     .section-hero {
       grid-column: 3 / 11;
       grid-row: 3 / 4;
-      display: flex;
-      justify-content: space-between;
-      align-items: center; } }
+      align-self: stretch; } }
   @media only screen and (min-width: 68.75em) {
     .section-hero {
-      height: 30rem; } }
+      grid-column: 3 / span 4;
+      grid-row: hero-start/ hero-end;
+      align-self: flex-start; } }
   @media only screen and (min-width: 56.25em) {
     .section-hero {
-      height: 30rem; } }
+      height: 30rem;
+      align-self: flex-start; } }
 
 .section-illustration {
   grid-column: 7 / span 4;
@@ -64,7 +64,7 @@ body {
   display: flex;
   justify-content: center;
   background-image: url("https://i.imgur.com/dHr5YEu.png");
-  clip-path: polygon(0 13%, 100% 0, 100% 87%, 0 100%); }
+  clip-path: polygon(0 13%, 100% 0%, 100% 100%, 0 87%); }
   @media only screen and (max-width: 56.25em) {
     .section-illustration {
       grid-column: 3 / 11;
@@ -103,6 +103,10 @@ body {
   @media only screen and (max-width: 56.25em) {
     .header-navbar {
       grid-template-columns: 1fr repeat(3, 1fr) 1fr 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .header-navbar {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(3, 1fr); } }
   .header-navbar__btn {
     grid-column: 7 / 8;
     grid-row: 2 / 3; }
@@ -123,6 +127,11 @@ body {
         grid-row: 3 / 4;
         grid-column: 3 / 4;
         justify-self: center; } }
+    @media only screen and (max-width: 37.5em) {
+      .header-navbar__btn {
+        grid-row: 2/3;
+        grid-column: 4/6;
+        margin-top: 0; } }
   .header-navbar__heading-1 {
     grid-column: 1 / 3;
     grid-row: 2/3;
@@ -149,6 +158,10 @@ body {
     @media only screen and (max-width: 56.25em) {
       .header-navbar__items {
         grid-column: 3 / 6; } }
+    @media only screen and (max-width: 37.5em) {
+      .header-navbar__items {
+        grid-column: 1/ 5;
+        grid-row: 3 / 4; } }
   .header-navbar__item {
     display: flex;
     font-family: "Poppins", sans-serif;
@@ -191,20 +204,32 @@ body {
   @media only screen and (max-width: 56.25em) {
     .hero {
       width: 100%; } }
+  @media only screen and (max-width: 68.75em) {
+    .hero {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; } }
   .hero__heading {
     text-align: left;
     font-family: "Poppins", sans-serif;
     font-size: 5rem;
     font-weight: bold;
     margin-top: -1.5rem; }
+    @media only screen and (max-width: 68.75em) {
+      .hero__heading {
+        font-size: 4rem; } }
     @media only screen and (max-width: 56.25em) {
       .hero__heading {
-        text-align: center; } }
+        font-size: 4.5rem; } }
   .hero__sub-heading {
     font-family: "Poppins", sans-serif;
     font-size: 2rem;
     color: var(--color-grey-dark); }
     @media only screen and (max-width: 56.25em) {
+      .hero__sub-heading {
+        text-align: left; } }
+    @media only screen and (max-width: 48.75em) {
       .hero__sub-heading {
         text-align: center; } }
   .hero__icon {

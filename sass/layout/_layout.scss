@@ -1,0 +1,87 @@
+// Main wrapper
+.wrapper {
+    max-width: 160rem;
+    display: grid;
+    grid-template-columns: 1fr repeat(10, 1fr) 1fr;
+    grid-template-rows:
+        [header-start] 10rem [header-end] 7rem [hero-start] repeat(2, minmax(6rem, 1fr))
+        [hero-end] 3rem [testimonial-start] 0.5fr repeat(1, minmax(10rem, 1fr))
+        0.5fr [testimonial-end about-start] repeat(1, 1fr) [about-end];
+    grid-gap: 1rem;
+    @media only screen and (max-width: $bg-large) {
+        display: grid;
+        grid-template-columns: 1fr repeat(10, 1fr) 1fr;
+        grid-template-rows:
+            [header-start] 10rem [header-end] 7rem [hero-start] 35rem [hero-end] [testimonial-start]0.5fr repeat(
+                1,
+                minmax(10rem, 1fr)
+            )
+            0.5fr [testimonial-end];
+    }
+}
+
+// Layout
+.header {
+    grid-column: 3 / 11;
+    grid-row: header-start / header-end;
+}
+
+.section-hero {
+    grid-column: 3 / span 4;
+    grid-row: 3 / 5;
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: $bg-large) {
+        grid-column: 3 / 11;
+        grid-row: 3 / 4;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @media only screen and (min-width: $bg-largest) {
+        height: 30rem;
+    }
+    @media only screen and (min-width: $bg-large) {
+        height: 30rem;
+    }
+}
+
+.section-illustration {
+    grid-column: 7 / span 4;
+    grid-row: hero-start/hero-end;
+    display: flex;
+    justify-content: center;
+    background-image: url("https://i.imgur.com/dHr5YEu.png");
+    clip-path: polygon(0 13%, 100% 0, 100% 87%, 0 100%);
+    @media only screen and (max-width: $bg-large) {
+        grid-column: 3 / 11;
+        grid-row: 4 / 5;
+    }
+}
+
+.section-testimonials {
+    grid-column: 3 / 11;
+    grid-row: testimonial-start / testimonial-end;
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    @media only screen and (max-width: $bg-large) {
+        grid-row: 6 / 8;
+    }
+}
+
+.section-about {
+    background-image: url("https://i.imgur.com/dHr5YEu.png");
+    clip-path: polygon(0 13%, 100% 0, 100% 87%, 0 100%);
+    grid-row: 8 / 9;
+    grid-column: 3 / 11;
+    display: flex;
+    align-items: center;
+    @media only screen and (min-width: $bg-largest) {
+        grid-row: 9 / 11;
+    }
+    @media only screen and (min-width: $bg-large) {
+        grid-row: 9 / 11;
+    }
+}

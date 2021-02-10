@@ -1,15 +1,3 @@
-:root {
-  --color-white: #ffffff;
-  --color-black: #000000;
-  --color-primary: #2948ff;
-  --color-primary-dark: #111e6d;
-  --color-primary-tint: #0025ff;
-  --color-secondary: #e6c900;
-  --color-secondary-dark: #b39c00;
-  --color-secondary-tint: #fada00;
-  --color-grey-dark: #a1a1a1;
-  --color-grey-light-1: #ededed; }
-
 *,
 *::before,
 *::after {
@@ -22,6 +10,18 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   box-sizing: border-box; }
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-primary: #2948ff;
+  --color-primary-dark: #111e6d;
+  --color-primary-tint: #0025ff;
+  --color-secondary: #e6c900;
+  --color-secondary-dark: #b39c00;
+  --color-secondary-tint: #fada00;
+  --color-grey-dark: #a1a1a1;
+  --color-grey-light-1: #ededed; }
 
 .wrapper {
   max-width: 160rem;
@@ -41,7 +41,9 @@ body {
 
 .section-hero {
   grid-column: 3 / span 4;
-  grid-row: 3 / 4; }
+  grid-row: 3 / 5;
+  display: flex;
+  align-items: center; }
   @media only screen and (max-width: 56.25em) {
     .section-hero {
       grid-column: 3 / 11;
@@ -91,34 +93,6 @@ body {
   @media only screen and (min-width: 56.25em) {
     .section-about {
       grid-row: 9 / 11; } }
-
-.btn {
-  border-radius: 20px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 1.1rem 2rem;
-  transition: all 0.3s; }
-  .btn:active {
-    transform: translateY(2px); }
-  .btn--yellow {
-    font-size: 1.8rem;
-    color: var(--color-white);
-    background-color: var(--color-secondary);
-    box-shadow: 0 3.5px var(--color-secondary-dark), 0 1.1rem 1.5rem rgba(0, 0, 0, 0.25); }
-    .btn--yellow:hover {
-      background-color: var(--color-secondary-tint); }
-  .btn--blue {
-    font-size: 1.5rem;
-    font-weight: bold;
-    width: 13rem;
-    height: 4rem;
-    color: var(--color-white);
-    background-color: var(--color-primary);
-    box-shadow: 0 3.5px var(--color-primary-dark), 0 1.1rem 1.5rem rgba(0, 0, 0, 0.25);
-    transition: all 0.3s; }
-    .btn--blue:hover {
-      background-color: var(--color-primary-tint); }
 
 .header-navbar {
   display: grid;
@@ -196,8 +170,24 @@ body {
     text-decoration: none;
     color: var(--color-black); }
 
+.illustration-box {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  @media only screen and (max-width: 56.25em) {
+    .illustration-box {
+      justify-content: center; } }
+  .illustration-box__img {
+    width: 85%; }
+    @media only screen and (max-width: 68.75em) {
+      .illustration-box__img {
+        height: 75%; } }
+    @media only screen and (max-width: 56.25em) {
+      .illustration-box__img {
+        width: 75%; } }
+
 .hero {
-  width: 70%; }
+  width: 80%; }
   @media only screen and (max-width: 56.25em) {
     .hero {
       width: 100%; } }
@@ -226,22 +216,6 @@ body {
   .hero__btn-box {
     display: flex;
     justify-content: center; }
-
-.illustration-box {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  @media only screen and (max-width: 56.25em) {
-    .illustration-box {
-      justify-content: center; } }
-  .illustration-box__img {
-    width: 85%; }
-    @media only screen and (max-width: 68.75em) {
-      .illustration-box__img {
-        height: 75%; } }
-    @media only screen and (max-width: 56.25em) {
-      .illustration-box__img {
-        width: 75%; } }
 
 .testimonial-cards {
   display: grid;
@@ -320,6 +294,34 @@ body {
     grid-row: 1 / -1;
     width: 40%;
     margin-bottom: 0.8rem; }
+
+.btn {
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1.1rem 2rem;
+  transition: all 0.3s; }
+  .btn:active {
+    transform: translateY(2px); }
+  .btn--yellow {
+    font-size: 1.8rem;
+    color: var(--color-white);
+    background-color: var(--color-secondary);
+    box-shadow: 0 3.5px var(--color-secondary-dark), 0 1.1rem 1.5rem rgba(0, 0, 0, 0.25); }
+    .btn--yellow:hover {
+      background-color: var(--color-secondary-tint); }
+  .btn--blue {
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 13rem;
+    height: 4rem;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    box-shadow: 0 3.5px var(--color-primary-dark), 0 1.1rem 1.5rem rgba(0, 0, 0, 0.25);
+    transition: all 0.3s; }
+    .btn--blue:hover {
+      background-color: var(--color-primary-tint); }
 
 .about-textbox {
   display: flex;

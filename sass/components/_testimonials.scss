@@ -1,0 +1,93 @@
+.testimonial-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    grid-gap: 5rem;
+    justify-items: center;
+
+    @media only screen and (max-width: $bg-large) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+        grid-template-rows: repeat(2, minmax(23rem, 1fr));
+    }
+    &__img-box {
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__name {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.8rem;
+        color: var(--color-white);
+        grid-column: 1 / -1;
+        grid-row: 2 / span 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        background-color: var(--color-primary);
+        -webkit-clip-path: polygon(0 0, 100% 36%, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 36%, 100% 100%, 0 100%);
+        background-clip: border-box;
+    }
+
+    &__text {
+        font-family: "Poppins", sans-serif;
+        grid-column: 1 / -1;
+        grid-row: 3 / 5;
+        font-size: 1.6rem;
+        text-align: center;
+        color: var(--color-white);
+        background-color: var(--color-primary);
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        position: relative;
+        p {
+            align-self: center;
+            position: relative;
+            z-index: 9;
+            font-family: "Poppins", sans-serif;
+            padding: 0 1.1rem;
+            font-size: 1.6rem;
+            font-style: italic;
+        }
+        &::before {
+            content: "\0201C";
+            font-size: 20rem;
+            color: rgba(17, 30, 109, 0.35);
+            position: absolute;
+            top: -5rem;
+            left: 0;
+            z-index: 1;
+        }
+    }
+
+    &__card {
+        height: 26rem;
+        width: 22rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        border-radius: 2rem;
+        box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        align-self: center;
+        transition: all 0.3s;
+        &--mid {
+            @media only screen and (max-width: 1224px) {
+                grid-column: 1 / -1;
+                justify-self: center;
+            }
+        }
+        &:hover {
+            transform: translateY(2px);
+            box-shadow: 0 2rem 2.5rem rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    &__img {
+        grid-column: 1/ -1;
+        grid-row: 1 / -1;
+        width: 40%;
+        margin-bottom: 0.8rem;
+    }
+}

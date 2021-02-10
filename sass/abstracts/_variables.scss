@@ -1,0 +1,20 @@
+:root {
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    --color-primary: #2948ff;
+    --color-primary-dark: #111e6d;
+    --color-primary-tint: #0025ff;
+
+    --color-secondary: #e6c900;
+    --color-secondary-dark: #b39c00;
+    --color-secondary-tint: #fada00;
+
+    --color-grey-dark: #a1a1a1;
+    --color-grey-light-1: #ededed;
+}
+
+// Breakpoints
+$bg-largest: 68.75em; // 1100px
+$bg-large: 56.25em; // 900px
+$bg-medium: 48.75em; // 780px

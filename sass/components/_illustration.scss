@@ -1,0 +1,17 @@
+.illustration-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (max-width: $bg-large) {
+        justify-content: center;
+    }
+    &__img {
+        width: 85%;
+        @media only screen and (max-width: $bg-largest) {
+            height: 75%;
+        }
+        @media only screen and (max-width: $bg-large) {
+            width: 75%;
+        }
+    }
+}

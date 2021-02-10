@@ -289,8 +289,7 @@ body {
     margin-right: 0.5rem; }
     .testimonial-cards__rating img {
       color: var(--color-secondary);
-      width: 1.5rem;
-      height: 1.5rem; }
+      width: 10%; }
   .testimonial-cards__name {
     font-family: "Poppins", sans-serif;
     font-size: 1.8rem;

@@ -169,14 +169,21 @@ body {
         grid-column: 3 / 6; } }
     @media only screen and (max-width: 37.5em) {
       .header-navbar__items {
-        grid-column: 2/ 5;
+        grid-column: 1 / -1;
         grid-row: 3 / 4;
-        margin-top: 5rem; } }
+        margin-top: 5rem;
+        justify-content: center; } }
     @media only screen and (max-width: 26.56em) {
       .header-navbar__items {
-        grid-column: 1 / 4;
+        grid-column: 1 / -1;
         grid-row: 3 / 4;
-        justify-self: center; } }
+        padding: 0;
+        justify-content: center; } }
+    @media only screen and (max-width: 25em) {
+      .header-navbar__items {
+        grid-column: 1 /-1;
+        padding: 0;
+        justify-content: center; } }
   .header-navbar__item {
     display: flex;
     font-family: "Poppins", sans-serif;

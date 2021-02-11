@@ -20,14 +20,14 @@
         background-color: var(--color-primary);
         border-bottom-left-radius: 2rem;
         border-bottom-right-radius: 2rem;
-        -webkit-clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
-        clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 13%, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 13%, 100% 100%, 0 100%);
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 
     &__rating {
-        grid-row: 4/5;
+        grid-row: 4 / 5;
         grid-column: 2 /3;
         margin-right: 0.5rem;
         img {
@@ -69,7 +69,7 @@
             font-size: 20rem;
             color: rgba(17, 30, 109, 0.35);
             position: absolute;
-            top: -5rem;
+            top: -4rem;
             left: 0;
             z-index: 1;
         }
@@ -87,7 +87,7 @@
         align-self: center;
         transition: all 0.3s;
         &--mid {
-            @media only screen and (max-width: 1224px) {
+            @media only screen and (max-width: $bg-huge) {
                 grid-column: 1 / -1;
                 justify-self: center;
             }

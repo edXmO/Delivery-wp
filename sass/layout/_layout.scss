@@ -29,6 +29,14 @@
     }
 }
 
+// .tracker {
+//     grid-column: 3 / 11;
+//     grid-row: 3 / 4;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
 .section-hero {
     grid-column: 3 / span 4;
     grid-row: hero-start/ hero-end;
@@ -75,8 +83,8 @@
 
 .section-about {
     background-image: url("https://i.imgur.com/dHr5YEu.png");
-    clip-path: polygon(0 13%, 100% 0%, 100% 100%, 0 87%);
-    grid-row: 8 / 9;
+    clip-path: polygon(0 0, 100% 13%, 100% 100%, 0 100%);
+    grid-row: about-start / about-end;
     grid-column: 3 / 11;
     display: flex;
     align-items: center;

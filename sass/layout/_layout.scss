@@ -12,10 +12,8 @@
         display: grid;
         grid-template-columns: 1fr repeat(10, 1fr) 1fr;
         grid-template-rows:
-            [header-start] 10rem [header-end] 7rem [hero-start] 35rem [hero-end] [testimonial-start]0.5fr repeat(
-                1,
-                minmax(10rem, 1fr)
-            )
+            [header-start] 10rem [header-end] 7rem [hero-start] 35rem [hero-end] [testimonial-start]
+            minmax(10rem, 1fr)
             0.5fr [testimonial-end] 3rem [about-start] repeat(1, 1fr) [about-end];
     }
 }

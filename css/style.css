@@ -361,6 +361,7 @@ body {
       font-family: "Poppins", sans-serif;
       padding: 0 1.1rem;
       font-size: 1.6rem;
+      line-height: 1.7;
       font-style: italic; }
     .testimonial-cards__text::before {
       content: "\0201C";
@@ -424,11 +425,35 @@ body {
 
 .about-textbox {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin: 1rem 3rem; }
+  @media only screen and (max-width: 68.75em) {
+    .about-textbox {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; } }
+  .about-textbox__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 30rem;
+    margin: 4.5rem 3rem; }
   .about-textbox__text {
     font-family: "Poppins", sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: var(--color-white);
-    text-align: center; }
+    text-align: center;
+    line-height: 1.8; }
+  .about-textbox__svg {
+    height: 12rem;
+    width: 12rem; }
+    @media only screen and (max-width: 68.75em) {
+      .about-textbox__svg {
+        height: 0;
+        width: 0; } }
+  .about-textbox__icon {
+    height: 1.75rem;
+    width: 1.75rem;
+    filter: invert(100%) sepia(100%) saturate(38%) hue-rotate(331deg) brightness(110%) contrast(110%); }

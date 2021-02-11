@@ -1,13 +1,45 @@
 // About
 .about-textbox {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin: 1rem 3rem;
+    @media only screen and (max-width: $bg-largest) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 30rem;
+        margin: 4.5rem 3rem;
+        // @media only screen and (max-width: $bg-largest) {
+
+        //     justify-content: space-around;
+        //     align-items: center;
+        // }
+    }
     &__text {
         font-family: "Poppins", sans-serif;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         color: var(--color-white);
         text-align: center;
+        line-height: 1.8;
+    }
+    &__svg {
+        height: 12rem;
+        width: 12rem;
+        @media only screen and (max-width: $bg-largest) {
+            height: 0;
+            width: 0;
+        }
+    }
+    &__icon {
+        height: 1.75rem;
+        width: 1.75rem;
+        filter: invert(100%) sepia(100%) saturate(38%) hue-rotate(331deg) brightness(110%) contrast(110%);
     }
 }

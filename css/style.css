@@ -28,7 +28,7 @@ body {
   max-width: 140rem;
   display: grid;
   grid-template-columns: 1fr repeat(10, 1fr) 1fr;
-  grid-template-rows: [header-start] 10rem [header-end] 7rem [hero-start] repeat(2, minmax(6rem, 1fr)) [hero-end] 3rem [testimonial-start] 0.5fr repeat(1, minmax(10rem, 1fr)) 0.5fr [testimonial-end] 3rem [about-start] repeat(1, 1fr) [about-end];
+  grid-template-rows: [header-start] 10rem [header-end] 7rem [hero-start] repeat(2, minmax(6rem, 1fr)) [hero-end] 3rem [testimonial-start] minmax(10rem, 1fr) 0.5fr [testimonial-end] 3rem [about-start] repeat(1, 1fr) [about-end];
   grid-gap: 1rem; }
   @media only screen and (max-width: 56.25em) {
     .wrapper {
